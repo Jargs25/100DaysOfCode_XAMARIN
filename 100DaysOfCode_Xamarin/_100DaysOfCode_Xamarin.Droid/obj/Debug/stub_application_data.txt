@@ -1,0 +1,2 @@
+android.app.Application
+x_100DaysOfCode_Xamarin.Droid
