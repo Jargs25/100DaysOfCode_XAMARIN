@@ -30,3 +30,31 @@ C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_
 C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Plugin.Media.Abstractions.xml
 C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\obj\Debug\_100DaysOfCode_Xamarin.dll.mdb
 C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\_100DaysOfCode_Xamarin.dll.mdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\_100DaysOfCode_Xamarin.dll
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\_100DaysOfCode_Xamarin.pdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Plugin.Media.Abstractions.dll
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Plugin.Media.dll
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\WebService.dll
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Xamarin.Forms.Core.dll
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Xamarin.Forms.Platform.dll
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\System.Net.Primitives.dll
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Plugin.Media.pdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Plugin.Media.xml
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Plugin.Media.Abstractions.pdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Plugin.Media.Abstractions.xml
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\WebService.pdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Xamarin.Forms.Core.pdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Xamarin.Forms.Core.xml
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Xamarin.Forms.Platform.pdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\obj\Debug\_100DaysOfCode_Xamarin.dll
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\obj\Debug\_100DaysOfCode_Xamarin.pdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\System.ServiceModel.Http.dll
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\System.Net.Requests.dll
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\Windows.winmd
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\obj\Debug\_100DaysOfCode_Xamarin.csprojResolveAssemblyReference.cache
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\obj\Debug\_100DaysOfCode_Xamarin.dll.mdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\_100DaysOfCode_Xamarin.dll.mdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\obj\Debug\_100DaysOfCode_Xamarin.dll.mdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\_100DaysOfCode_Xamarin.dll.mdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\obj\Debug\_100DaysOfCode_Xamarin.dll.mdb
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\_100DaysOfCode_Xamarin.dll.mdb

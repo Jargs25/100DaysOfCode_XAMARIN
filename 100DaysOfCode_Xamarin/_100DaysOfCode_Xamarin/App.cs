@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using WebService.WCFProductos;
+using System.ServiceModel;
+using System.IO;
 
 namespace _100DaysOfCode_Xamarin
 {
     public class App : Application
     {
+        WCFProductoClient svcProductos = new WCFProductoClient(new BasicHttpBinding(), new EndpointAddress("http://192.168.0.14:50170/WCFProducto.svc"));
+
         private MediaFile mFile;
-        private ObservableCollection<producto> lstProductos;
-        private ObservableCollection<producto> lstProductos2;
+        private ObservableCollection<Producto> lstProductos;
 
         private ICommand icAgregarProducto => new Command(AgregarProducto);
         private ICommand icModificarProducto => new Command(ModificarProducto);
@@ -29,7 +33,7 @@ namespace _100DaysOfCode_Xamarin
         private Entry entNombre;
         private Entry entCantidad;
         private Entry entPrecio;
-        private producto Selected;
+        private Producto Selected;
         private Button btnAgregar;
         private Button btnModificar;
         private Button btnEliminar;
@@ -37,7 +41,12 @@ namespace _100DaysOfCode_Xamarin
 
         public App()
         {
-            CreateProductos();
+            lstProductos = new ObservableCollection<Producto>();
+            svcProductos.BuscarProductosAsync(GetProducto());
+            svcProductos.BuscarProductosCompleted += SvcProductos_BuscarProductosCompleted;
+            svcProductos.AgregarProductoCompleted += SvcProductos_AgregarProductoCompleted;
+            svcProductos.ModificarProductoCompleted += SvcProductos_ModificarProductoCompleted;
+            svcProductos.EliminarProductoCompleted += SvcProductos_EliminarProductoCompleted;
             // The root page of your application
             var content = new ContentPage
             {
@@ -79,6 +88,38 @@ namespace _100DaysOfCode_Xamarin
             MainPage = npPrincipal;
         }
 
+        private void SvcProductos_EliminarProductoCompleted(object sender, EliminarProductoCompletedEventArgs e)
+        {
+            svcProductos.BuscarProductosAsync(GetProducto());
+        }
+
+        private void SvcProductos_ModificarProductoCompleted(object sender, ModificarProductoCompletedEventArgs e)
+        {
+            svcProductos.BuscarProductosAsync(GetProducto());
+        }
+
+        private void SvcProductos_AgregarProductoCompleted(object sender, AgregarProductoCompletedEventArgs e)
+        {
+            svcProductos.BuscarProductosAsync(GetProducto());
+        }
+
+        private void SvcProductos_BuscarProductosCompleted(object sender, BuscarProductosCompletedEventArgs e)
+        {
+            try
+            {
+                lstProductos.Clear();
+                var res = e.Result;
+                for (int i = 0; i < res.Count; i++)
+                {
+                    lstProductos.Add(res[i]);
+                }
+            }
+            catch (Exception ex)
+            {
+                CreateProductos();
+            }
+        }
+
         private async void BtnSubirImagen_Clicked(object sender, EventArgs e)
         {
             IniciarAnimacion(btnSubirImagen);
@@ -101,17 +142,23 @@ namespace _100DaysOfCode_Xamarin
 
         private void LvRegistros_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Selected = new producto();
-            Selected = (producto) e.SelectedItem;
+            Selected = new Producto();
+            Selected = (Producto) e.SelectedItem;
             entCodigo.Text = Selected.codigo;
             entNombre.Text = Selected.nombre;
             entCantidad.Text = Selected.cantidad.ToString();
             entPrecio.Text = Selected.precio.ToString();
             imgProducto.Source = null;
-            imgProducto.Source = Selected.imagen;
+            imgProducto.Source = GetImageSource(Selected.imagen);
             btnAgregar.IsEnabled = false;
             btnModificar.IsEnabled = true;
             btnEliminar.IsEnabled = true;
+            btnBuscar.Text = "Limpiar pantalla";
+        }
+
+        private ImageSource GetImageSource(byte[] imagen)
+        {
+            return imagen != null ? ImageSource.FromStream(() => new MemoryStream(imagen)) : ImageSource.FromStream(() => new MemoryStream(new byte[0]));
         }
 
         private void AgregarProducto()
@@ -120,12 +167,14 @@ namespace _100DaysOfCode_Xamarin
 
             if (sonValidos())
             {
-                producto oProducto = new producto("0000", entNombre.Text.Trim(), Convert.ToInt32(entCantidad.Text.Trim()), Convert.ToDouble(entPrecio.Text.Trim()), "NoDisponible");
+                Producto oProducto = GetProducto(entNombre.Text.Trim(), Convert.ToInt32(entCantidad.Text.Trim()), Convert.ToDouble(entPrecio.Text.Trim()));
                 if (imgProducto.Source != null)
                 {
-                    oProducto.imagen = imgProducto.Source;
+                    oProducto.imagen = GetByteArrayImage(imgProducto.Source);
+                    string[] imgName = mFile.Path.Split('/');
+                    oProducto.rutaImagen = imgName[imgName.Length - 1];
                 }
-                lstProductos.Add(oProducto);
+                svcProductos.AgregarProductoAsync(oProducto);
                 limpiarCampos();
             }
             else
@@ -137,16 +186,29 @@ namespace _100DaysOfCode_Xamarin
         {
             IniciarAnimacion(btnModificar);
 
-            producto nuevoProducto = new producto(Selected.codigo, entNombre.Text.Trim(), Convert.ToInt32(entCantidad.Text.Trim()), Convert.ToDouble(entPrecio.Text.Trim()), "NoDisponible");
-            if (imgProducto.Source != null)
+            if (sonValidos())
             {
-                nuevoProducto.imagen = imgProducto.Source;
+                Producto nuevoProducto = GetProducto(entNombre.Text.Trim(), Convert.ToInt32(entCantidad.Text.Trim()), Convert.ToDouble(entPrecio.Text.Trim()));
+                nuevoProducto.codigo = Selected.codigo;
+                nuevoProducto.id = Selected.id;
+
+                if (imgProducto.Source != null)
+                {
+                    nuevoProducto.imagen = GetByteArrayImage(imgProducto.Source);
+                    if (mFile != null)
+                    {
+                        string[] imgName = mFile.Path.Split('/');
+                        nuevoProducto.rutaImagen = imgName[imgName.Length - 1];
+                    }
+                }
+                svcProductos.ModificarProductoAsync(nuevoProducto);
+                limpiarCampos();
             }
-            int index = lstProductos.IndexOf(Selected);
-            lstProductos.Remove(Selected);
-            lstProductos.Insert(index, nuevoProducto);
-            lvRegistros.ItemsSource = lstProductos;
-            limpiarCampos();
+            else
+            {
+                Current.MainPage.DisplayAlert("Mensaje de app", "Verifique los campos", "Aceptar");
+            }
+            
         }
         private async void EliminarProducto()
         {
@@ -155,31 +217,32 @@ namespace _100DaysOfCode_Xamarin
             var res =  await Current.MainPage.DisplayAlert("Mensaje de app", "¿Desea eliminar el registro seleccionado?", "SI", "NO");
             if (res)
             {
-                lvRegistros.ItemsSource = lstProductos;
-                lstProductos.Remove(Selected);
+                Producto oProducto = GetProducto();
+                oProducto.id = Selected.id;
+                oProducto.rutaImagen = Selected.rutaImagen;
+
+                svcProductos.EliminarProductoAsync(oProducto);
                 limpiarCampos();
             }
         }
         private void BuscarProducto()
         {
-            IniciarAnimacion(btnBuscar);
-
-            lstProductos2 = new ObservableCollection<producto>();
-
-            for (int i = 0; i < lstProductos.Count; i++)
+            if (btnBuscar.Text.Contains("Buscar"))
             {
-                producto item = lstProductos[i];
+                IniciarAnimacion(btnBuscar);
+
                 string nombre = entNombre.Text != null ? entNombre.Text.Trim() : "";
-                string cantidad = entCantidad.Text != null ? entCantidad.Text.Trim() : "";
-                string precio = entPrecio.Text != null ? entPrecio.Text.Trim() : "";
+                string cantidad = entCantidad.Text != null ? entCantidad.Text.Trim() : "0";
+                string precio = entPrecio.Text != null ? entPrecio.Text.Trim() : "0";
+                Producto oProducto = GetProducto(nombre, Convert.ToInt32(cantidad), Convert.ToDouble(precio));
 
-                if (item.nombre.Contains(nombre) && item.cantidad.ToString().Contains(cantidad) && item.precio.ToString().Contains(precio))
-                {
-                    lstProductos2.Add(item);
-                }
+                svcProductos.BuscarProductosAsync(oProducto);
             }
-
-            lvRegistros.ItemsSource = lstProductos2;
+            else
+            {
+                svcProductos.BuscarProductosAsync(GetProducto());
+                limpiarCampos();
+            }
         }
 
         protected override void OnStart()
@@ -197,12 +260,16 @@ namespace _100DaysOfCode_Xamarin
 
         private void CreateProductos()
         {
-            lstProductos = new ObservableCollection<producto>();
+            lstProductos = new ObservableCollection<Producto>();
 
-            //lstProductos.Add(new producto("0001", "producto1", 1, 1.50, "nodisponible"));
-            //lstProductos.Add(new producto("0002", "producto2", 2, 2.50, "nodisponible"));
-            //lstProductos.Add(new producto("0003", "producto3", 3, 3.50, "nodisponible"));
-            //lstProductos.Add(new producto("0004", "producto4", 4, 4.50, "nodisponible"));
+            for (int i = 0; i < 4; i++)
+            {
+                string num = (i + 1).ToString();
+                Producto oProducto = GetProducto("Producto" + num, (i + 1), (i + 1) + 0.50);
+                oProducto.codigo = "000" + (i + 1).ToString();
+                lstProductos.Add(oProducto);
+            }
+            lvRegistros.ItemsSource = lstProductos;
         }
         private DataTemplate GetTemplate()
         {
@@ -228,8 +295,11 @@ namespace _100DaysOfCode_Xamarin
                     }
                 };
 
-                imageProducto.SetBinding(Image.SourceProperty, "imagen");
+                Binding binding = new Binding("imagen");
+                binding.Converter = new BindImagen();
+                imageProducto.SetBinding(Image.SourceProperty, binding);
                 imageProducto.Margin = new Thickness(4);
+                imageProducto.HeightRequest = 100;
                 lblCodigo.SetBinding(Label.TextProperty, "codigo");
                 lblNombre.SetBinding(Label.TextProperty, "nombre");
                 lblCantidad.SetBinding(Label.TextProperty, "cantidad");
@@ -399,6 +469,7 @@ namespace _100DaysOfCode_Xamarin
         }
         private void limpiarCampos()
         {
+            mFile = null;
             entCodigo.Text = null;
             entNombre.Text = null;
             entCantidad.Text = null;
@@ -407,12 +478,50 @@ namespace _100DaysOfCode_Xamarin
             btnModificar.IsEnabled = false;
             btnEliminar.IsEnabled = false;
             imgProducto.Source = null;
-            Selected = new producto();
+            btnBuscar.Text = "Buscar producto";
+            Selected = new Producto();
         }
         private async void IniciarAnimacion(Button btn)
         {
             await btn.FadeTo(0.5, 100);
             await btn.FadeTo(1, 100);
+        }
+        public Producto GetProducto()
+        {
+            Producto oProducto = new Producto();
+
+            oProducto.id = 0;
+            oProducto.codigo = "";
+            oProducto.nombre = "";
+            oProducto.cantidad = 0;
+            oProducto.precio = 0;
+            oProducto.rutaImagen = "NoDisponible";
+
+            return oProducto;
+        }
+        public Producto GetProducto(string nombre, int cantidad, double precio)
+        {
+            Producto oProducto = new Producto();
+
+            oProducto.id = 0;
+            oProducto.codigo = "";
+            oProducto.nombre = nombre;
+            oProducto.cantidad = cantidad;
+            oProducto.precio = precio;
+            oProducto.rutaImagen = "NoDisponible";
+
+            return oProducto;
+        }
+        private byte[] GetByteArrayImage(ImageSource image)
+        {
+            StreamImageSource sis = (StreamImageSource)image;
+            System.Threading.CancellationToken cancelT = System.Threading.CancellationToken.None;
+            System.Threading.Tasks.Task<Stream> task = sis.Stream(cancelT);
+            Stream stm = task.Result;
+            byte[] aryImg = new byte[stm.Length];
+            stm.Read(aryImg, 0, aryImg.Length);
+
+            return aryImg;
         }
     }
 }

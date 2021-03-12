@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Plugin.Media" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="Plugin.Media">
+				<NamedResource name="CameraCaptureUI.xbf" uri="ms-resource://Plugin.Media/Files/Plugin.Media/CameraCaptureUI.xbf">
+					<Candidate type="Path">
+						<Value>Plugin.Media\CameraCaptureUI.xbf</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="CameraCaptureUIPage.xbf" uri="ms-resource://Plugin.Media/Files/Plugin.Media/CameraCaptureUIPage.xbf">
+					<Candidate type="Path">
+						<Value>Plugin.Media\CameraCaptureUIPage.xbf</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Plugin.Media.xr.xml" uri="ms-resource://Plugin.Media/Files/Plugin.Media/Plugin.Media.xr.xml">
+					<Candidate type="Path">
+						<Value>Plugin.Media\Plugin.Media.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

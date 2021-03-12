@@ -1,13 +1,13 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\jargs\documents\visual studio 2015\100daysofcode_xamarin\100daysofcode_xamarin\_100daysofcode_xamarin.winphone\obj\debug\intermediatexaml\_100daysofcode_xamarin.winphone.exe" HashGuid="dd942866-dfd2-2f53-a29f-fb64cb57b69f" />
-    <ReferenceAssembly PathName="c:\users\jargs\documents\visual studio 2015\100daysofcode_xamarin\packages\xam.plugin.media.2.6.0\lib\wpa81\plugin.media.abstractions.dll" HashGuid="2f026a7c-41cf-6c4a-d5ab-5661045873a2" />
-    <ReferenceAssembly PathName="c:\users\jargs\documents\visual studio 2015\100daysofcode_xamarin\packages\xam.plugin.media.2.6.0\lib\wpa81\plugin.media.dll" HashGuid="674591e9-0ebc-35be-1d0b-dce742167069" />
-    <ReferenceAssembly PathName="c:\users\jargs\documents\visual studio 2015\100daysofcode_xamarin\packages\xamarin.forms.2.3.4.247\lib\wpa81\xamarin.forms.core.dll" HashGuid="ce7e3dc8-18ca-8130-fa7a-5e5224c7b440" />
-    <ReferenceAssembly PathName="c:\users\jargs\documents\visual studio 2015\100daysofcode_xamarin\packages\xamarin.forms.2.3.4.247\lib\wpa81\xamarin.forms.platform.dll" HashGuid="6b938cd4-44c0-2618-7eb6-4caa3f482076" />
-    <ReferenceAssembly PathName="c:\users\jargs\documents\visual studio 2015\100daysofcode_xamarin\packages\xamarin.forms.2.3.4.247\lib\wpa81\xamarin.forms.platform.winrt.dll" HashGuid="a861a807-c05d-0f84-2d21-93f0c7e733ae" />
-    <ReferenceAssembly PathName="c:\users\jargs\documents\visual studio 2015\100daysofcode_xamarin\packages\xamarin.forms.2.3.4.247\lib\wpa81\xamarin.forms.platform.winrt.phone.dll" HashGuid="4381a56f-41e7-7872-51a4-d23109c536cd" />
-    <ReferenceAssembly PathName="c:\users\jargs\documents\visual studio 2015\100daysofcode_xamarin\packages\xamarin.forms.2.3.4.247\lib\wpa81\xamarin.forms.xaml.dll" HashGuid="df61c4ca-47c1-60a5-1f80-e826bb936aad" />
-    <ReferenceAssembly PathName="c:\users\jargs\documents\visual studio 2015\100daysofcode_xamarin\100daysofcode_xamarin\_100daysofcode_xamarin\bin\debug\_100daysofcode_xamarin.dll" HashGuid="6012eafa-3dcd-b03b-e2af-e34ae45677db" />
+    <LocalAssembly PathName="e:\100daysofcode_xamarin\100daysofcode_xamarin\_100daysofcode_xamarin.winphone\obj\debug\intermediatexaml\_100daysofcode_xamarin.winphone.exe" HashGuid="dd942866-dfd2-2f53-a29f-fb64cb57b69f" />
+    <ReferenceAssembly PathName="e:\100daysofcode_xamarin\packages\xam.plugin.media.2.6.0\lib\wpa81\plugin.media.abstractions.dll" HashGuid="2f026a7c-41cf-6c4a-d5ab-5661045873a2" />
+    <ReferenceAssembly PathName="e:\100daysofcode_xamarin\packages\xam.plugin.media.2.6.0\lib\wpa81\plugin.media.dll" HashGuid="674591e9-0ebc-35be-1d0b-dce742167069" />
+    <ReferenceAssembly PathName="e:\100daysofcode_xamarin\packages\xamarin.forms.2.3.4.247\lib\wpa81\xamarin.forms.core.dll" HashGuid="ce7e3dc8-18ca-8130-fa7a-5e5224c7b440" />
+    <ReferenceAssembly PathName="e:\100daysofcode_xamarin\packages\xamarin.forms.2.3.4.247\lib\wpa81\xamarin.forms.platform.dll" HashGuid="6b938cd4-44c0-2618-7eb6-4caa3f482076" />
+    <ReferenceAssembly PathName="e:\100daysofcode_xamarin\packages\xamarin.forms.2.3.4.247\lib\wpa81\xamarin.forms.platform.winrt.dll" HashGuid="a861a807-c05d-0f84-2d21-93f0c7e733ae" />
+    <ReferenceAssembly PathName="e:\100daysofcode_xamarin\packages\xamarin.forms.2.3.4.247\lib\wpa81\xamarin.forms.platform.winrt.phone.dll" HashGuid="4381a56f-41e7-7872-51a4-d23109c536cd" />
+    <ReferenceAssembly PathName="e:\100daysofcode_xamarin\packages\xamarin.forms.2.3.4.247\lib\wpa81\xamarin.forms.xaml.dll" HashGuid="df61c4ca-47c1-60a5-1f80-e826bb936aad" />
+    <ReferenceAssembly PathName="e:\100daysofcode_xamarin\100daysofcode_xamarin\_100daysofcode_xamarin\bin\debug\_100daysofcode_xamarin.dll" HashGuid="455157b5-1eea-df4a-31d0-c7cfd0b22986" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

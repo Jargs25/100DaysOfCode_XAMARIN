@@ -138,8 +138,15 @@ class MonoPackageManager_Resources {
 		"System.Text.RegularExpressions.dll",
 		"System.Collections.Concurrent.dll",
 		"System.Runtime.InteropServices.dll",
+		"WebService.dll",
+		"System.Diagnostics.Tools.dll",
+		"System.Runtime.Serialization.Primitives.dll",
+		"System.ServiceModel.Primitives.dll",
+		"System.ComponentModel.EventBasedAsync.dll",
+		"System.Net.Primitives.dll",
+		"System.ServiceModel.Http.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_24";
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_23";
 }

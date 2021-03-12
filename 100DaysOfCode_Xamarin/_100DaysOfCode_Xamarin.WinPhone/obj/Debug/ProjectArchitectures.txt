@@ -1,2 +1,2 @@
-C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.WinPhone\_100DaysOfCode_Xamarin.WinPhone.csproj;neutral
-C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.csproj;neutral
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.WinPhone\_100DaysOfCode_Xamarin.WinPhone.csproj;neutral
+E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.csproj;neutral

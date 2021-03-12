@@ -10,86 +10,95 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>dbcc35e2-5375-4199-b380-46ecee1ed0e0</PackageIdentityName>
     <PackageIdentityPublisher>CN=JARGS</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\obj\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\bin\Debug\_100DaysOfCode_Xamarin.Windows.exe">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\bin\Debug\_100DaysOfCode_Xamarin.Windows.exe">
       <PackagePath>_100DaysOfCode_Xamarin.Windows.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Core.dll">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xam.Plugin.Media.2.6.0\lib\win8\Plugin.Media.Abstractions.dll">
+      <PackagePath>Plugin.Media.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xam.Plugin.Media.2.6.0\lib\win8\Plugin.Media.dll">
+      <PackagePath>Plugin.Media.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.dll">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.dll">
       <PackagePath>Xamarin.Forms.Platform.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT.dll">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT.dll">
       <PackagePath>Xamarin.Forms.Platform.WinRT.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet.dll">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet.dll">
       <PackagePath>Xamarin.Forms.Platform.WinRT.Tablet.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Xaml.dll">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\_100DaysOfCode_Xamarin.dll">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\_100DaysOfCode_Xamarin.dll">
       <PackagePath>_100DaysOfCode_Xamarin.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin\bin\Debug\WebService.dll">
+      <PackagePath>WebService.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\bin\Debug\_100DaysOfCode_Xamarin.Windows.xr.xml">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\bin\Debug\_100DaysOfCode_Xamarin.Windows.xr.xml">
       <PackagePath>_100DaysOfCode_Xamarin.Windows.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT\PageControl.xbf">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT\PageControl.xbf">
       <PackagePath>Xamarin.Forms.Platform.WinRT\PageControl.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT\StepperControl.xbf">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT\StepperControl.xbf">
       <PackagePath>Xamarin.Forms.Platform.WinRT\StepperControl.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT\Xamarin.Forms.Platform.WinRT.xr.xml">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT\Xamarin.Forms.Platform.WinRT.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.WinRT\Xamarin.Forms.Platform.WinRT.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet\FormsTextBoxStyle.xbf">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet\FormsTextBoxStyle.xbf">
       <PackagePath>Xamarin.Forms.Platform.WinRT.Tablet\FormsTextBoxStyle.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet\Resources.xbf">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet\Resources.xbf">
       <PackagePath>Xamarin.Forms.Platform.WinRT.Tablet\Resources.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet\TabletResources.xbf">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet\TabletResources.xbf">
       <PackagePath>Xamarin.Forms.Platform.WinRT.Tablet\TabletResources.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet\Xamarin.Forms.Platform.WinRT.Tablet.xr.xml">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\packages\Xamarin.Forms.2.3.4.247\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet\Xamarin.Forms.Platform.WinRT.Tablet.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.WinRT.Tablet\Xamarin.Forms.Platform.WinRT.Tablet.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\JARGS\Documents\Visual Studio 2015\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="E:\100DaysOfCode_Xamarin\100DaysOfCode_Xamarin\_100DaysOfCode_Xamarin.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
